@@ -1,0 +1,44 @@
+{% extends('index/layout.html') %}
+
+{% block title %} raza {% endblock %}
+{% block tema %}
+    <div class="td">
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    {% if False %}
+                    {% elif ke=="razahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('raza_saha', kwargs={'pk':he[ke]}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('raza_saha', kwargs={'pk':he[ke]}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="razaname" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('raza_raza') }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('raza_saha', kwargs={'pk':he.razahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% else %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="#"
+                        title="{{ ve }}"
+                        target="_blank"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

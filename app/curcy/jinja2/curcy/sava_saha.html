@@ -1,0 +1,44 @@
+{% extends('index/layout.html') %}
+
+{% block title %} sava {% endblock %}
+{% block tema %}
+    <div class="td">
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    {% if False %}
+                    {% elif ke=="savahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('sava_saha', kwargs={'pk':he[ke]}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('sava_saha', kwargs={'pk':he[ke]}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="savaname" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('sava_sava') }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('sava_saha', kwargs={'pk':he.savahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% else %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="#"
+                        title="{{ ve }}"
+                        target="_blank"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,242 @@
+- model: index.hala
+  pk: begebege
+  fields: {}
+- model: index.hala
+  pk: belubelu
+  fields: {}
+- model: index.hala
+  pk: botoboto
+  fields: {}
+- model: index.hala
+  pk: bulebule
+  fields: {}
+- model: index.hala
+  pk: dobodobo
+  fields: {}
+- model: index.hala
+  pk: fosofoso
+  fields: {}
+- model: index.hala
+  pk: galagala
+  fields: {}
+- model: index.hala
+  pk: godogodo
+  fields: {}
+- model: index.hala
+  pk: golugolu
+  fields: {}
+- model: index.hala
+  pk: guruguru
+  fields: {}
+- model: index.hala
+  pk: holoholo
+  fields: {}
+- model: index.hala
+  pk: lomolomo
+  fields: {}
+- model: index.hala
+  pk: lotoloto
+  fields: {}
+- model: index.hala
+  pk: moromoro
+  fields: {}
+- model: index.hala
+  pk: motomoto
+  fields: {}
+- model: index.hala
+  pk: nehoneho
+  fields: {}
+- model: index.hala
+  pk: nekeneke
+  fields: {}
+- model: index.hala
+  pk: noronoro
+  fields: {}
+- model: index.hala
+  pk: pelepele
+  fields: {}
+- model: index.hala
+  pk: putuputu
+  fields: {}
+- model: index.hala
+  pk: rokuroku
+  fields: {}
+- model: index.hala
+  pk: roserose
+  fields: {}
+- model: index.hala
+  pk: ruborubo
+  fields: {}
+- model: index.hala
+  pk: sokusoku
+  fields: {}
+- model: index.hala
+  pk: teletele
+  fields: {}
+- model: index.hala
+  pk: tulutulu
+  fields: {}
+- model: index.hala
+  pk: vetevete
+  fields: {}
+- model: index.hala
+  pk: vosuvosu
+  fields: {}
+- model: index.hala
+  pk: votuvotu
+  fields: {}
+- model: joint.suvu
+  pk: godogodo
+  fields:
+    perehale: galagala
+    zovohalebe: vetevete
+    zovohalepe: guruguru
+- model: order.zovo
+  pk: guruguru
+  fields:
+    perehale: nehoneho
+    tevehalebe: roserose
+    zovokalebe: '4.0000000000'
+    tevehalepe: tulutulu
+    zovokalepe: '100.0000000000'
+- model: order.zovo
+  pk: vetevete
+  fields:
+    perehale: galagala
+    tevehalebe: tulutulu
+    zovokalebe: '54.7600000000'
+    tevehalepe: roserose
+    zovokalepe: '2.0000000000'
+- model: curcy.mara
+  pk: 1
+  fields:
+    marahale: bulebule
+    maraname: м
+- model: curcy.mara
+  pk: 2
+  fields:
+    marahale: ruborubo
+    maraname: руб
+- model: curcy.fara
+  pk: 1
+  fields:
+    farahale: pelepele
+    faraname: труба
+- model: curcy.fara
+  pk: 2
+  fields:
+    farahale: belubelu
+    faraname: '-'
+- model: curcy.maka
+  pk: 1
+  fields:
+    makahale: holoholo
+    makaname: АД31.Т1.КР
+- model: curcy.maka
+  pk: 2
+  fields:
+    makahale: votuvotu
+    makaname: '-'
+- model: curcy.raza
+  pk: 1
+  fields:
+    razahale: vosuvosu
+    razaname: 8х1,0х6000
+- model: curcy.raza
+  pk: 2
+  fields:
+    razahale: noronoro
+    razaname: '-'
+- model: curcy.sata
+  pk: 1
+  fields:
+    satahale: nekeneke
+    sataname: ГОСТ 18475-82
+- model: curcy.sata
+  pk: 2
+  fields:
+    satahale: moromoro
+    sataname: '-'
+- model: curcy.mata
+  pk: 1
+  fields:
+    matahale: rokuroku
+    mataname: алюминий
+- model: curcy.mata
+  pk: 2
+  fields:
+    matahale: teletele
+    mataname: '-'
+- model: curcy.teve
+  pk: roserose
+  fields:
+    marahale: bulebule
+    farahale: pelepele
+    makahale: holoholo
+    razahale: vosuvosu
+    satahale: nekeneke
+    matahale: rokuroku
+- model: curcy.teve
+  pk: tulutulu
+  fields:
+    marahale: ruborubo
+    farahale: belubelu
+    makahale: votuvotu
+    razahale: noronoro
+    satahale: moromoro
+    matahale: teletele
+- model: curcy.sava
+  pk: golugolu
+  fields:
+    savaname: Труба алюм.круг АД31Т1 8х1,0х6000
+- model: curcy.solo
+  pk: lotoloto
+  fields:
+    savahale: golugolu
+    tevehale: roserose
+- model: perso.fama
+  pk: dobodobo
+  fields:
+    famaname: ООО "НЕОТЕХ"
+- model: perso.fama
+  pk: lomolomo
+  fields:
+    famaname: ООО "Галактика"
+- model: perso.tafa
+  pk: begebege
+  fields:
+    tafaname: '+78001007658'
+- model: perso.tafa
+  pk: sokusoku
+  fields:
+    tafaname: '+78123200241'
+- model: perso.mala
+  pk: botoboto
+  fields:
+    malaname: info@galakmet.ru
+- model: perso.mala
+  pk: motomoto
+  fields:
+    malaname: npskspb@mail.ru
+- model: perso.hara
+  pk: fosofoso
+  fields:
+    haraname: http://www.specprommet.ru/
+- model: perso.hara
+  pk: putuputu
+  fields:
+    haraname: https://www.galakmet.ru/
+- model: perso.pere
+  pk: galagala
+  fields:
+    famahale: lomolomo
+    tafahale: begebege
+    malahale: botoboto
+    harahale: putuputu
+- model: perso.pere
+  pk: nehoneho
+  fields:
+    famahale: dobodobo
+    tafahale: sokusoku
+    malahale: motomoto
+    harahale: fosofoso

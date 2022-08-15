@@ -1,0 +1,23 @@
+{% extends('index/layout.html') %}
+
+{% block title %} создать {% endblock %}
+{% block tema %}
+    <form method="POST" class="post-form">
+        {{ csrf_input }}
+        <div class="tr">
+        {% for field in form %}
+            <div class="td">
+                    <div class="tr">
+                    {{ field.label }}:
+                    </div>
+                    <div class="tr">
+                     {{ field }}
+                     </div>
+            </div>
+        {% endfor %}
+            <div class="td">
+            <button type="submit" class="save btn btn-outline-primary">Создать</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

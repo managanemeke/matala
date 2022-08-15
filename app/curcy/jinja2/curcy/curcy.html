@@ -1,0 +1,95 @@
+{% extends('index/layout.html') %}
+
+{% block title %} валюта {% endblock %}
+{% block tema %}
+    <div class="td">
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    {% if False %}
+                    {% elif he[ke].__str__()=="-" %}
+                    {% elif ke=="tevehale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('teve_saha', kwargs={'pk':he[ke]}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('teve_saha', kwargs={'pk':he[ke]}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="marahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('mara_saha', kwargs={'pk':he[ke].marahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('mara_saha', kwargs={'pk':he[ke].marahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="farahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('fara_saha', kwargs={'pk':he[ke].farahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('fara_saha', kwargs={'pk':he[ke].farahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="makahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('maka_saha', kwargs={'pk':he[ke].makahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('maka_saha', kwargs={'pk':he[ke].makahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="razahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('raza_saha', kwargs={'pk':he[ke].razahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('raza_saha', kwargs={'pk':he[ke].razahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="satahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('sata_saha', kwargs={'pk':he[ke].satahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('sata_saha', kwargs={'pk':he[ke].satahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="matahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('mata_saha', kwargs={'pk':he[ke].matahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('mata_saha', kwargs={'pk':he[ke].matahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% else %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="#"
+                        title="{{ ve }}"
+                        target="_blank"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

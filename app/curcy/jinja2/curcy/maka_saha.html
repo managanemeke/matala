@@ -1,0 +1,44 @@
+{% extends('index/layout.html') %}
+
+{% block title %} maka {% endblock %}
+{% block tema %}
+    <div class="td">
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    {% if False %}
+                    {% elif ke=="makahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('maka_saha', kwargs={'pk':he[ke]}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('maka_saha', kwargs={'pk':he[ke]}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="makaname" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('maka_maka') }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('maka_saha', kwargs={'pk':he.makahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% else %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="#"
+                        title="{{ ve }}"
+                        target="_blank"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

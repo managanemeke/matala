@@ -1,0 +1,14 @@
+from ..index.models import *
+from perso.models import *
+from curcy.models import *
+from order.models import *
+from joint.models import *
+
+kalahe = "velesenu"
+kalasa = Fara()
+kalasa.farahale = kalahe
+kalasa.faraname = 'ООО "Галактика"'
+kalasa.save()
+kalasa = Hala()
+kalasa.halahale = kalahe
+kalasa.save()

@@ -1,0 +1,192 @@
+body {
+    color: #200772;
+    font-family: "Futura";
+    margin: 0;
+}
+.ta {
+    top: 0;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgba(255,255,255,0.8);
+}
+.te {
+    min-height: calc(90vh - 4vh);
+    width: calc(100% - 4vh);
+    display: flex;
+    box-sizing: border-box;
+    margin: 2vh;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    border-radius: 2vh;
+    border: 1px dotted #200772;
+    padding: 2vh;
+}
+.to {
+    position: fixed;
+    bottom: 0;
+    height: 4vh;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.8);
+}
+.tasa {
+    height: 100%;
+    width: auto;
+    display: block;
+    background-color: #bacfed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 2vh 2vh;
+    padding: 1vh;
+}
+.tasa:nth-child(2n) {
+    background-color: #fedbac;
+}
+.tasa:first-child {
+    border-radius: 0 0 2vh 0;
+}
+.tasa:last-child {
+    border-radius: 0 0 0 2vh;
+}
+.tasa:hover {
+    box-shadow: 0 0 0.5vh 0.5vh #bacfed;
+}
+.tasa:nth-child(2n):hover {
+    box-shadow: 0 0 0.5vh 0.5vh #fedbac;
+}
+.tasa a {
+    text-decoration: none;
+    color: inherit;
+}
+.tasa img {
+    height: 5vh;
+    width: auto;
+}
+.taza {
+    height: 100%;
+    width: 40%;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+}
+.temale img {
+    max-height: 70vh;
+    width: 30vw;
+}
+.temale, .temara {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF4f0;
+    border-radius: 2vh 2vh 2vh 2vh;
+    padding: 3vh;
+}
+.temara {
+    background-color: #edf8ff;
+}
+.tema {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.toma {
+    font-size: 0.8rem;
+}
+.btn-outline-primary {
+    color: #200772;
+    border-color: #200772;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #200772;
+}
+.form-control {
+    border-color: #200772;
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0.5vh 0.5vh #bacfed;
+}
+.temara .btn-outline-primary {
+    color: #FA6541;
+    border-color: #FA6541;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.temara .btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #FA6541;
+}
+.temara .form-control {
+    border-color: #FA6541;
+}
+.temara .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0.5vh 0.5vh #fedbac;
+}
+.btn:focus {
+    box-shadow: none;
+}
+.table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #edf8ff;
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: 1vh;
+}
+.td {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow:hidden;
+    width: auto;
+    background-color: #FFF4f0;
+    margin: 1vh;
+    border-radius: 1vh;
+    color: #200772;
+}
+.td a {
+    padding: 0.5vh;
+    color: #200772;
+    text-decoration: none;
+    border: 1px solid #200772;
+    border-radius: 0.5vh;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.td a:hover {
+    color: #ffffff;
+    background-color: #200772;
+}
+.table>:not(:first-child) {
+    border-top: none;
+}

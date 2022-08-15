@@ -1,0 +1,17 @@
+{% extends('index/layout.html') %}
+
+{% block title %} связка {% endblock %}
+{% block tema %}
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    <a
+                    class="td"
+                    href="#"
+                    title="{{ ve }}"
+                    target="_blank"
+                    >{{ he[ke] }}</a>
+                {% endfor %}
+            </div> 
+        {% endfor %}
+{% endblock %}

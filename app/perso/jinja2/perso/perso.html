@@ -1,0 +1,218 @@
+{% extends('index/layout.html') %}
+
+{% block title %} мистер {% endblock %}
+{% block tema %}
+        {#
+        <div class="tr">
+            <div class="td">nene = уникальный код фирмы</div>
+            <div class="td">neke = уникальный ник фирмы</div>
+            <div class="td">nehe = уникальное имя фирмы</div>
+            <div class="td">gomo = множество городов сотрудников</div>
+            <div class="td">gomo = множество адресов</div>
+            <div class="td">namo = множество фио</div>
+            <div class="td">domo = множество должностей</div>
+            <div class="td">memo = множество почт</div>
+            <div class="td">fomo = множество телефонов</div>
+            <div class="td">humo = множество url</div>
+        </div>
+        <div class="tr">
+            <a 
+            class="td"
+            href="#"
+            title="код фирмы"
+            target="_blank"
+            >175283</a>
+            <a
+            class="td"
+            href="#"
+            title="ник фирмы"
+            target="_blank"
+            >melene</a>
+            <a
+            class="td"
+            href="#"
+            title="имя фирмы"
+            target="_blank"
+            >ООО "УТК-Сталь"</a>
+            <a
+            class="td"
+            href="#"
+            title="город"
+            target="_blank"
+            >Санкт-Петербург</a>
+            <a
+            class="td"
+            href="#"
+            title="адрес отгрузки"
+            target="_blank"
+            >Санкт-Петербург, ул. Альпинистов, д. 6</a>
+            <a
+            class="td"
+            href="#"
+            title="фио сотрудника"
+            target="_blank"
+            >Юркин Максим Александрович</a>
+            <a
+            class="td"
+            href="#"
+            title="должность"
+            target="_blank"
+            >Руководитель обособленного подразделения г. Санкт-Петербург</a>
+            <a
+            class="td"
+            href="#"
+            title="телефон"
+            target="_blank"
+            >+7 812 702-10-77</a>
+            <a
+            class="td"
+            href="#"
+            title="e-mail"
+            target="_blank"
+            >spb@utk-steel.ru</a>
+            <a
+            class="td"
+            href="https://utk-steel.ru/"
+            title="сайт"
+            target="_blank"
+            >utk-steel.ru</a>
+        </div>
+        <div class="tr">
+            <a
+            class="td"
+            href="{{ url('perso') }}melene"
+            title="имя фирмы"
+            target="_blank"
+            >ООО "УТК-Сталь"</a>
+            <a
+            class="td"
+            href="tel:+78127021077"
+            title="телефон"
+            target="_self"
+            >+7 812 702-10-77</a>
+            <a
+            class="td"
+            href="mailto:spb@utk-steel.ru"
+            title="e-mail"
+            target="_self"
+            >spb@utk-steel.ru</a>
+            <a
+            class="td"
+            href="https://utk-steel.ru/"
+            title="сайт"
+            target="_blank"
+            >utk-steel.ru</a>
+        </div>
+        <div class="tr">
+            <a
+            class="td"
+            href="{{ url('perso') }}melene"
+            title="имя фирмы"
+            target="_blank"
+            >ООО "УТК-Сталь"</a>
+            <a
+            class="td"
+            href="tel:+78127021077"
+            title="телефон"
+            target="_self"
+            >+7 812 702-10-77</a>
+            <a
+            class="td"
+            href="mailto:spb@utk-steel.ru"
+            title="e-mail"
+            target="_self"
+            >spb@utk-steel.ru</a>
+            <a
+            class="td"
+            href="https://utk-steel.ru/"
+            title="сайт"
+            target="_blank"
+            >utk-steel.ru</a>
+            <a
+            class="td"
+            href="{{ url('perso') }}melene/changes"
+            title="изменения"
+            target="_blank"
+            >2022.01.11</a>
+            <a
+            class="td"
+            href="{{ url('perso') }}melene/changes/20220111060138"
+            title="конкретное"
+            target="_blank"
+            >06:01:38</a>
+            <a
+            class="td"
+            href="#"
+            title="прайслист"
+            target="_blank"
+            >нет прайслиста</a>
+            <a
+            class="td"
+            href="#"
+            title="тип лица"
+            target="_blank"
+            >база</a>
+        </div>
+        #}
+    <div class="td">
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    {% if False %}
+                    {% elif ke=="perehale" %}
+                    {% elif ke=="famahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('perso') + he['perehale'] }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ he[ke].famahale }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="tafahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="tel:{{ he[ke] }}"
+                        title="{{ ve }}"
+                        target="_self"
+                        data-hale="{{ he[ke].tafahale }}"
+                        >{{ he[ke]|tafaname }}</a>
+                    </div>
+                    {% elif ke=="harahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ he[ke] }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ he[ke].harahale }}"
+                        >{{ he[ke]|haraname }}</a>
+                    </div>
+                    {% elif ke=="malahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="mailto:{{ he[ke] }}"
+                        title="{{ ve }}"
+                        target="_self"
+                        data-hale="{{ he[ke].malahale }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif he[ke].__str__()=="-" %}
+                    {% else %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="#"
+                        title="{{ ve }}"
+                        target="_blank"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

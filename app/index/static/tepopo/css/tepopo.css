@@ -1,0 +1,39 @@
+:root {
+    --tepopo-bc: white;
+    --rehepe-hbc: #bacfed;
+    --tepopo-brc: #200772;
+    --tepopo-brr: 1vh;
+}
+.tepopo {
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    background-color: var(--tepopo-bc);
+    border: 1px solid var(--tepopo-brc);
+    border-radius: var(--tepopo-brr);
+}
+.repepe {
+    font-size: 0.7em;
+    overflow: hidden;
+    position: absolute;
+    border: 1px solid var(--tepopo-brc);
+    border-radius: var(--tepopo-brr);
+}
+.rehepe {
+    background-color: var(--tepopo-bc);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 5px;
+}
+.rehepe:hover {
+    background-color: var(--rehepe-hbc);
+    cursor: hand;
+}
+.tepopopa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,54 @@
+{% extends('index/layout.html') %}
+
+{% block title %} solo {% endblock %}
+{% block tema %}
+    <div class="td">
+        {% for he in rows %}
+            <div class="tr">
+                {% for ke, ve in colnames.items() %}
+                    {% if False %}
+                    {% elif ke=="solohale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('solo_saha', kwargs={'pk':he[ke]}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('solo_saha', kwargs={'pk':he[ke]}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="savahale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('sava_saha', kwargs={'pk':he[ke].savahale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('sava_saha', kwargs={'pk':he[ke].savahale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% elif ke=="tevehale" %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="{{ url('teve_saha', kwargs={'pk':he.tevehale}) }}"
+                        title="{{ ve }}"
+                        target="_blank"
+                        data-hale="{{ url('teve_saha', kwargs={'pk':he.tevehale}) }}"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% else %}
+                    <div class="td">
+                        <a
+                        class="td"
+                        href="#"
+                        title="{{ ve }}"
+                        target="_blank"
+                        >{{ he[ke] }}</a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

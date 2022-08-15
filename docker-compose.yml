@@ -1,0 +1,42 @@
+version: '3.8'
+
+networks:
+  ma:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.55.0/24
+          gateway: 192.168.55.1
+
+services:
+  web:
+    build: ./app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./app/:/usr/src/app/
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+    networks:
+      ma:
+        ipv4_address: 192.168.55.10
+  db:
+    image: postgres:13.0-alpine
+    #volumes:
+      #- postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=matala_hasa
+      - POSTGRES_PASSWORD=matala_pasa
+      - POSTGRES_DB=matala_daba
+    #ports:
+      #- "5432:5432"
+    networks:
+      ma:
+        ipv4_address: 192.168.55.11
+
+#volumes:
+  #postgres_data:
