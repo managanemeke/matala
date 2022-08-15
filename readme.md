@@ -42,40 +42,25 @@ http://188.127.227.79:8000
     **"listen = 127.0.0.1:9123"**
 
 - `cd ~`  
-    `rm -r nagakama`  
-    `git clone https://github.com/managanemeke/nagakama`  
-    `cd nagakama`  
-    `cp nagakama /etc/nginx/sites-available/nagakama`  
-    `cd /etc/nginx/sites-enabled/`  
-    `rm nagakama`  
-    `ln -s /etc/nginx/sites-available/nagakama`  
-    `rm /etc/nginx/sites-enabled/default`
-
-- `cd ~`  
-    `rm -r /var/www/nagakama`  
-    `cp -r nagakama/ /var/www/nagakama/`  
-    `rm /var/www/nagakama/nagakama.conf`  
-    `rm /var/www/nagakama/nagakama`  
-    `chown -R www-data:www-data /var/www/nagakama`
+    `rm -r matala`  
+    `git clone https://github.com/managanemeke/matala`  
+    `cd matala`
 
 ### startapps stage
 
-- `service php7.4-fpm start`  
-    `service nginx start`
+- `./ma.sh`
 
 ### testapps stage
 
-- `nginx -v`  
-    `nginx -t`  
-    `service --status-all`
+- `docker --version`  
+    `docker-compose --version`
 
-- `wget http://localhost`  
+- `wget http://localhost:8000`  
     `vi index.html`  
     and you will see...
 
 ### stopapps stage
 
-- `service nginx stop`  
-    `service php7.4-fpm stop`
+- `./na.sh`
 
 
