@@ -1,8 +1,8 @@
 # nagakama
 
 Simple Django webapp for collecting prices of
-rolled metall products
-from different russian metall stores
+rolled metal products
+from different russian metal stores
 in one PostgreSQL database.
 
 You can see it in action here:  
@@ -29,7 +29,8 @@ http://188.127.227.79:8000
     `apt install docker-ce docker-ce-cli 
     containerd.io docker-compose-plugin`  
 - `curl -L 
-  "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" 
+  "https://github.com/docker/compose/releases/download/
+  1.29.2/docker-compose-$(uname -s)-$(uname -m)" 
   -o /usr/local/bin/docker-compose`  
     `chmod +x /usr/local/bin/docker-compose`  
 
