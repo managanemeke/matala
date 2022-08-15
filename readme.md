@@ -35,12 +35,6 @@ http://188.127.227.79:8000
 
 ### configapps stage
 
-- `cd /etc/php/7.4/fpm/pool.d`  
-    `vi www.conf`  
-    **"listen = /run/php/php7.4-fpm.sock"**  
-    replace on  
-    **"listen = 127.0.0.1:9123"**
-
 - `cd ~`  
     `rm -r matala`  
     `git clone https://github.com/managanemeke/matala`  
